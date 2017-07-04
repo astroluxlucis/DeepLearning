@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    {% load staticfiles %}
+    <title>Deep Learning</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'main/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="{% static 'main/vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'main/vendor/fonts/fontLora.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'main/vendor/fonts/fontCabin.css' %}" rel='stylesheet' type='text/css'>
+    <!-- Custom styles for this template -->
+    <link href="{% static 'main/css/grayscale.min.css' %}" rel="stylesheet">
+
+    <!-- Temporary navbar container fix -->
+    <style>
+    .navbar-toggler {
+        z-index: 1;
+    }
+
+    @media (max-width: 576px) {
+        nav > .container {
+            width: 100%;
+        }
+    }
+    </style>
+
+</head>
+
+<body id="page-top">
+
+    <!-- Navigation -->
+    <nav id="mainNav" class="navbar fixed-top navbar-toggleable-md navbar-light">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarExample" aria-controls="navbarExample" aria-expanded="false" aria-label="Toggle navigation">
+            Menu <i class="fa fa-bars"></i>
+        </button>
+        <div class="container">
+            <a class="navbar-brand" href="#page-top">Deep Learning</a>
+            <div class="collapse navbar-collapse" id="navbarExample">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item" style="font-size: 14px">
+                        <a class="nav-link" href="#">Dataset Preparation</a>
+                    </li>
+                    <li class="nav-item" style="font-size: 14px">
+                        <a class="nav-link" href="#">System Training</a>
+                    </li>
+                    <li class="nav-item" style="font-size: 14px">
+                        <a class="nav-link" href="#">System Testing</a>
+                    </li>
+                    <li class="nav-item" style="font-size: 14px">
+                        <a class="nav-link" href="#">Report Generation</a>
+                    </li>
+                    <li class="nav-item" style="font-size: 14px">
+                        <a class="nav-link" href="{% url 'main:logout_user' %}">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+{% block body %}
+{% endblock %}
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p>Copyright &copy; A Project Split-Persona</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="{% static 'main/vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'main/vendor/tether/tether.min.js' %}"></script>
+    <script src="{% static 'main/vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="{% static 'main/vendor/jquery-easing/jquery.easing.min.js' %}"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="{% static 'main/js/grayscale.min.js' %}"></script>
+
+</body>
+
+</html>
